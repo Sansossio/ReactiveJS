@@ -1,0 +1,2 @@
+/* ReactiveJS */
+require('./es5');

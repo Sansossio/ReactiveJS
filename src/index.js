@@ -1,15 +1,4 @@
 /* eslint-disable no-await-in-loop */
-/* import ReactiveVar from './lib/ReactiveVar';
-
-const test = new ReactiveVar('123');
-test.autorun((nextValue, previousValue) => {
-  console.log(`cambio a de ${previousValue} to ${nextValue}`);
-  return true;
-});
-test.Value = '123333';
-console.log(test.Value);
-
-*/
 import ReactiveBase from './lib/ReactiveBase';
 import ReactiveVar from './lib/ReactiveVar';
 import ReactiveMongo from './lib/ReactiveMongo';

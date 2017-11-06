@@ -1,2 +1,3 @@
 /* ReactiveJS */
-require('./src');
+/* Load code for ES6 */
+import './src';
