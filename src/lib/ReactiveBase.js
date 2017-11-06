@@ -7,6 +7,7 @@ class ReactiveBase extends Global {
     this.callback = () => true;
     this.data = val;
   }
+  // Getters & Setters
   set Value(val) {
     let cond = false;
     if (this.Value && typeof val === 'object') {
@@ -15,15 +16,13 @@ class ReactiveBase extends Global {
       cond = Current === New;
     }
     if (cond) return;
-    this.callback(val, this.data);
+    // Define new val
     this.data = val;
+    // Callback
+    this.callback(this.data);
   }
   get Value() {
     return this.data;
-  }
-  set(val) {
-    if (val === this.value.value || !this.callback(val, this.value.data)) return;
-    this.value.data = val;
   }
   // Custom methods
   autorun(callback) {

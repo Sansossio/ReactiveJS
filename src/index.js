@@ -1,7 +1,7 @@
 /* eslint-disable no-await-in-loop */
 import ReactiveBase from './lib/ReactiveBase';
-import ReactiveVar from './lib/ReactiveVar';
-import ReactiveMongo from './lib/ReactiveMongo';
+import ReactiveVar from './lib/ReactiveVar/ReactiveVar';
+import ReactiveMongo from './lib/ReactiveMongo/ReactiveMongo';
 
 class ReactiveJS extends ReactiveBase {
   constructor(options = {}) {

@@ -5,8 +5,8 @@ var _ = require('../');
 var options = {
   Mongo: 'mongodb://localhost:27017/castlesurvival'
 };
-var Mongo = new _.ReactiveJS(options);
-Mongo.startup(function (MongoDb) {
+var Reactive = new _.ReactiveJS(options);
+Reactive.startup(function (MongoDb) {
   // Your code here
   var users = MongoDb.ReactiveCollection('users');
   var usersItems = MongoDb.ReactiveCollection('users_items');

@@ -1,5 +1,5 @@
 import MongoClient from 'mongodb';
-import ReactiveBase from './ReactiveBase';
+import ReactiveBase from '../ReactiveBase';
 import MongoCollection from './MongoCollection';
 
 class ReactiveMongo extends ReactiveBase {
@@ -23,7 +23,9 @@ class ReactiveMongo extends ReactiveBase {
   }
   ReactiveCollection(col) {
     const self = this;
-    return new MongoCollection(col, self.database);
+    const response = new MongoCollection(self.database);
+    response.Collection(col);
+    return response;
   }
 }
 

@@ -1,4 +1,4 @@
-import ReactiveBase from './ReactiveBase';
+import ReactiveBase from '../ReactiveBase';
 
 class ReactiveVar extends ReactiveBase {
   set val(val) {

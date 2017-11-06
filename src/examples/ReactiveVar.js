@@ -1,10 +1,10 @@
 import { ReactiveVar } from '../';
 
-const test = new ReactiveVar('123');
+const test = new ReactiveVar(123);
 
-test.autorun((nextValue, previousValue) => {
-  console.log(`cambio a de ${previousValue} to ${nextValue}`);
+test.autorun((value) => {
+  console.log(`new value ${value}`);
   return true;
 });
 
-test.Value = '123333';
+test.Value = 321;
