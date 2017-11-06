@@ -1,0 +1,43 @@
+{
+  "name": "reactivejs",
+  "version": "0.0.1",
+  "description": "Easily manage the flow of data reactive",
+  "main": "index.js",
+  "scripts": {
+    "start": "babel-node ./es5 --presets es2015,stage-2",
+    "reactivevar": "babel-node ./es5/examples/ReactiveVar --presets es2015,stage-2",
+    "reactivemongo": "babel-node ./es5/examples/ReactiveMongo --presets es2015,stage-2",
+    "build": "npx babel src --out-dir es5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sansossio/ReactiveJS.git"
+  },
+  "keywords": [
+    "reactive",
+    "mongo",
+    "mysql",
+    "var",
+    "data"
+  ],
+  "author": "Julio Sansossio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Sansossio/ReactiveJS/issues"
+  },
+  "homepage": "https://github.com/Sansossio/ReactiveJS#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "eslint": "^4.10.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.4.0"
+  },
+  "dependencies": {
+    "mongodb": "^2.2.33"
+  }
+}
