@@ -21,10 +21,10 @@ class ReactiveMongo extends ReactiveBase {
       self.database = db;
     });
   }
-  ReactiveCollection(col) {
+  ReactiveCollection(col, timeUpdate = false) {
     const self = this;
-    const response = new MongoCollection(self.database);
-    response.Collection(col);
+    const response = new MongoCollection(self.database, col, timeUpdate);
+    response.Collection();
     return response;
   }
 }

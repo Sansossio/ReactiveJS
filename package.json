@@ -1,6 +1,6 @@
 {
   "name": "reactivejs",
-  "version": "0.0.2",
+  "version": "0.0.21",
   "description": "Easily manage the flow of data reactive",
   "main": "index.js",
   "scripts": {

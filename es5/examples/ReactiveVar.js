@@ -4,9 +4,9 @@ var _ = require('../');
 
 var test = new _.ReactiveVar(123);
 
-test.autorun(function (nextValue, previousValue) {
-  console.log('cambio a de ' + previousValue + ' to ' + nextValue);
+test.autorun(function (value) {
+  console.log('new value ' + value);
   return true;
 });
 
-test.Value = '321';
+test.Value = 321;

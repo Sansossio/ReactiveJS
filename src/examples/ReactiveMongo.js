@@ -1,6 +1,5 @@
 import { ReactiveJS } from '../';
 
-
 const options = {
   Mongo: 'mongodb://localhost:27017/castlesurvival',
 };
@@ -17,4 +16,10 @@ Reactive.startup((MongoDb) => {
   usersItems.autorun((data) => {
     console.log(data.length, 'users_items');
   });
+  let count = 0;
+  setInterval(async () => {
+    count += 1;
+    const info = { test: count };
+    await users.InsertAsync(info);
+  }, 1000);
 });

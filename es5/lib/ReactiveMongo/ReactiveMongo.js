@@ -57,9 +57,11 @@ var ReactiveMongo = function (_ReactiveBase) {
   }, {
     key: 'ReactiveCollection',
     value: function ReactiveCollection(col) {
+      var timeUpdate = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+
       var self = this;
-      var response = new _MongoCollection2.default(self.database);
-      response.Collection(col);
+      var response = new _MongoCollection2.default(self.database, col, timeUpdate);
+      response.Collection();
       return response;
     }
   }]);

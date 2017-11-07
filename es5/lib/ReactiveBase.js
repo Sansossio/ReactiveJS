@@ -35,17 +35,13 @@ var ReactiveBase = function (_Global) {
     _this.data = val;
     return _this;
   }
+  // Getters & Setters
+
 
   _createClass(ReactiveBase, [{
-    key: 'set',
-    value: function set(val) {
-      if (val === this.value.value || !this.callback(val, this.value.data)) return;
-      this.value.data = val;
-    }
-    // Custom methods
-
-  }, {
     key: 'autorun',
+
+    // Custom methods
     value: function autorun(callback) {
       this.callback = callback;
     }
@@ -59,8 +55,10 @@ var ReactiveBase = function (_Global) {
         cond = Current === New;
       }
       if (cond) return;
-      this.callback(val, this.data);
+      // Define new val
       this.data = val;
+      // Callback
+      this.callback(this.data);
     },
     get: function get() {
       return this.data;

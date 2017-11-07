@@ -18,4 +18,10 @@ Reactive.startup(function (MongoDb) {
   usersItems.autorun(function (data) {
     console.log(data.length, 'users_items');
   });
+  var count = 0;
+  setInterval(async function () {
+    count += 1;
+    var info = { test: count };
+    await users.InsertAsync(info);
+  }, 1000);
 });
